@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1440, height=1440" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1440px; height: 1440px; overflow: hidden; background: #f7f4ee; }
+      #root { position: relative; width: 1440px; height: 1440px; background: #f7f4ee; }
+      #scene { position: absolute; left: 0; top: 0; width: 1440px; height: 1440px; display: block; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="5" data-width="1440" data-height="1440">
+      <div id="stage" class="clip" data-start="0" data-duration="5" data-track-index="0">
+        <svg id="scene" viewBox="0 0 1440 1440" width="1440" height="1440" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <!-- Felpa: bordes peludos, fibras finas hacia afuera y sombra de contacto -->
+            <filter id="fuzz" filterUnits="userSpaceOnUse" x="-200" y="-200" width="1840" height="1840" color-interpolation-filters="sRGB">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="0.5" result="soft" />
+              <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="n" />
+              <feDisplacementMap in="soft" in2="n" scale="15" xChannelSelector="R" yChannelSelector="G" result="d" />
+              <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="3" seed="41" result="n3" />
+              <feColorMatrix in="n3" type="matrix" values="0.45 0 0 0 0.68  0.45 0 0 0 0.68  0.45 0 0 0 0.68  0 0 0 0 1" result="tex" />
+              <feComposite in="tex" in2="d" operator="in" result="texm" />
+              <feBlend in="texm" in2="d" mode="multiply" result="dt" />
+              <feMorphology in="d" operator="dilate" radius="9" result="grow" />
+              <feTurbulence type="fractalNoise" baseFrequency="1.35 1.1" numOctaves="1" seed="21" result="n2" />
+              <feColorMatrix in="n2" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  9 0 0 0 -4.1" result="speck" />
+              <feComposite in="grow" in2="speck" operator="in" result="hair" />
+              <feMerge result="fur"><feMergeNode in="hair" /><feMergeNode in="dt" /></feMerge>
+              <feDropShadow in="fur" dx="7" dy="16" stdDeviation="13" flood-color="#3b1119" flood-opacity="0.3" />
+            </filter>
+            <filter id="fuzzSoft" filterUnits="userSpaceOnUse" x="-200" y="-200" width="1840" height="1840" color-interpolation-filters="sRGB">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="0.5" result="soft" />
+              <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="11" result="n" />
+              <feDisplacementMap in="soft" in2="n" scale="13" xChannelSelector="R" yChannelSelector="G" result="d" />
+              <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="3" seed="42" result="n3" />
+              <feColorMatrix in="n3" type="matrix" values="0.45 0 0 0 0.68  0.45 0 0 0 0.68  0.45 0 0 0 0.68  0 0 0 0 1" result="tex" />
+              <feComposite in="tex" in2="d" operator="in" result="texm" />
+              <feBlend in="texm" in2="d" mode="multiply" result="dt" />
+              <feMorphology in="d" operator="dilate" radius="7" result="grow" />
+              <feTurbulence type="fractalNoise" baseFrequency="1.35 1.1" numOctaves="1" seed="33" result="n2" />
+              <feColorMatrix in="n2" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  9 0 0 0 -4.2" result="speck" />
+              <feComposite in="grow" in2="speck" operator="in" result="hair" />
+              <feMerge result="fur"><feMergeNode in="hair" /><feMergeNode in="dt" /></feMerge>
+              <feDropShadow in="fur" dx="5" dy="11" stdDeviation="9" flood-color="#3b1119" flood-opacity="0.3" />
+            </filter>
+            <filter id="fuzzPom" filterUnits="userSpaceOnUse" x="-200" y="-200" width="1840" height="1840" color-interpolation-filters="sRGB">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="soft" />
+              <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="5" result="n" />
+              <feDisplacementMap in="soft" in2="n" scale="22" xChannelSelector="R" yChannelSelector="G" result="d" />
+              <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="3" seed="43" result="n3" />
+              <feColorMatrix in="n3" type="matrix" values="0.45 0 0 0 0.68  0.45 0 0 0 0.68  0.45 0 0 0 0.68  0 0 0 0 1" result="tex" />
+              <feComposite in="tex" in2="d" operator="in" result="texm" />
+              <feBlend in="texm" in2="d" mode="multiply" result="dt" />
+              <feMorphology in="d" operator="dilate" radius="11" result="grow" />
+              <feTurbulence type="fractalNoise" baseFrequency="1.35 1.1" numOctaves="1" seed="9" result="n2" />
+              <feColorMatrix in="n2" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  9 0 0 0 -3.9" result="speck" />
+              <feComposite in="grow" in2="speck" operator="in" result="hair" />
+              <feMerge result="fur"><feMergeNode in="hair" /><feMergeNode in="dt" /></feMerge>
+              <feDropShadow in="fur" dx="6" dy="14" stdDeviation="11" flood-color="#4a2a05" flood-opacity="0.3" />
+            </filter>
+            <linearGradient id="gOut" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="-585">
+              <stop offset="0" stop-color="#8e2a3f" />
+              <stop offset="0.4" stop-color="#8e2a3f" />
+              <stop offset="1" stop-color="#c9566e" />
+            </linearGradient>
+            <linearGradient id="gIn" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="-360">
+              <stop offset="0" stop-color="#d9788e" />
+              <stop offset="1" stop-color="#eeb0bf" />
+            </linearGradient>
+            <linearGradient id="fO" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="-585">
+              <stop offset="0" stop-color="#c9667c" /><stop offset="0.55" stop-color="#e3a2b2" /><stop offset="1" stop-color="#efc0cb" />
+            </linearGradient>
+            <linearGradient id="fI" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="-360">
+              <stop offset="0" stop-color="#df8fa4" /><stop offset="0.6" stop-color="#f3bccb" /><stop offset="1" stop-color="#f9d6de" />
+            </linearGradient>
+            <linearGradient id="fL" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="-270">
+              <stop offset="0" stop-color="#587733" /><stop offset="1" stop-color="#86a34f" />
+            </linearGradient>
+            <radialGradient id="gPom" gradientUnits="userSpaceOnUse" cx="690" cy="676" r="125">
+              <stop offset="0" stop-color="#ffe58a" /><stop offset="0.45" stop-color="#f4b932" /><stop offset="1" stop-color="#b9780f" />
+            </radialGradient>
+          </defs>
+
+          <rect width="1440" height="1440" fill="#f7f4ee" />
+
+          <g id="cam">
+            <g id="stemLayer" filter="url(#fuzzSoft)">
+              <g id="leaves"></g>
+              <g id="stemG">
+                <path id="stemMain" d="M 690 1470 C 630 1280 810 1010 720 720" fill="none" stroke="#4e6b2e" stroke-width="30" stroke-linecap="round" />
+                <path d="M 686 1470 C 626 1280 806 1010 716 720" fill="none" stroke="#86a35a" stroke-width="7" stroke-linecap="round" opacity="0.6" />
+                <path d="M 690 1470 C 630 1280 810 1010 720 720" fill="none" stroke="#6f8f40" stroke-width="36" stroke-dasharray="1 4" stroke-linecap="round" opacity="0.4" />
+              </g>
+            </g>
+
+            <g id="flower">
+              <g id="outerLayer" filter="url(#fuzz)"></g>
+              <g id="innerLayer" filter="url(#fuzz)"></g>
+              <g id="pomLayer" filter="url(#fuzzPom)"><g id="pom"></g></g>
+            </g>
+          </g>
+
+        </svg>
+      </div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const NS = "http://www.w3.org/2000/svg";
+      const CX = 720, CY = 720;
+
+      function loop(L, w) {
+        return `M0 0 C ${-w} ${-L * 0.22} ${-w * 0.92} ${-L * 0.86} 0 ${-L} C ${w * 0.92} ${-L * 0.86} ${w} ${-L * 0.22} 0 0 Z`;
+      }
+      function makeLoop(parent, o) {
+        const g = document.createElementNS(NS, "g");
+        g.setAttribute("class", o.cls);
+        const d = loop(o.L, o.w);
+        const d2 = loop(o.L * 0.58, o.w * 0.5);
+        const body = (dd, sw, extra) =>
+          `<path d="${dd}" fill="none" stroke="${o.stroke}" stroke-width="${sw}" stroke-linejoin="round" stroke-linecap="round"/>` +
+          `<path d="${dd}" transform="translate(-5 -5)" fill="none" stroke="${o.hi}" stroke-width="${Math.round(sw * 0.2)}" stroke-linejoin="round" opacity="0.38"/>` +
+          `<path d="${dd}" fill="none" stroke="${o.fibre}" stroke-width="${sw + 10}" stroke-dasharray="1 3.3" stroke-linejoin="round" opacity="0.3"/>` +
+          `<path d="${dd}" fill="none" stroke="${o.dark}" stroke-width="${sw - 4}" stroke-dasharray="1.5 7.3" stroke-linejoin="round" opacity="0.18"/>`;
+        g.innerHTML =
+          `<g transform="translate(${o.bx || CX} ${o.by || CY})">` +
+          `<path d="${d}" fill="${o.fill}" stroke="none"/>` +
+          (o.coil === false ? "" : body(d2, Math.round(o.sw * 0.8))) +
+          body(d, o.sw) + `</g>`;
+        parent.appendChild(g);
+        return g;
+      }
+
+      // Hojas (lazos verdes)
+      const leafSpecs = [
+        { x: 704, y: 1330, rot: -62, L: 270, w: 100 },
+        { x: 676, y: 1395, rot: 66, L: 250, w: 95 },
+      ];
+      const leaves = leafSpecs.map((s, i) => {
+        const g = makeLoop(document.getElementById("leaves"), { cls: "leaf", bx: s.x, by: s.y, coil: false, dark: "#34491c", L: s.L, w: s.w, sw: 30, fill: "url(#fL)", stroke: "#4e6b2e", hi: "#8fae5f", fibre: "#6f8f40" });
+        gsap.set(g, { svgOrigin: s.x + " " + s.y, rotation: s.rot, scale: 0 });
+        return g;
+      });
+
+      // Pétalos exteriores (8) e interiores (6)
+      const outerAngles = [];
+      for (let k = -4; k < 4; k++) outerAngles.push(k * 45 + 22.5);
+      const innerAngles = [];
+      for (let k = -3; k < 3; k++) innerAngles.push(k * 60 + 30);
+
+      const outer = outerAngles.map((a) => {
+        const g = makeLoop(document.getElementById("outerLayer"), { cls: "pO", L: 585, w: 160, sw: 40, fill: "url(#fO)", stroke: "url(#gOut)", hi: "#e58aa0", fibre: "#d46b82", dark: "#5e1526" });
+        return { g, a };
+      });
+      const inner = innerAngles.map((a) => {
+        const g = makeLoop(document.getElementById("innerLayer"), { cls: "pI", L: 360, w: 118, sw: 32, fill: "url(#fI)", stroke: "url(#gIn)", hi: "#f9d9e0", fibre: "#f1b3c1", dark: "#b8566f" });
+        return { g, a };
+      });
+
+      // Pompon: bola de felpa con volumen (luz arriba a la izquierda, sombra abajo a la derecha)
+      (function () {
+        const pom = document.getElementById("pom");
+        function spiral(phase, r0, r1, turns) {
+          let d = "";
+          const n = 180;
+          for (let i = 0; i <= n; i++) {
+            const t = i / n;
+            const ang = phase + t * turns * Math.PI * 2;
+            const r = r0 + (r1 - r0) * t;
+            d += (i ? "L" : "M") + (CX + Math.cos(ang) * r).toFixed(1) + " " + (CY + Math.sin(ang) * r).toFixed(1) + " ";
+          }
+          return d;
+        }
+        const a = spiral(0, 10, 96, 4), b = spiral(Math.PI * 0.66, 18, 90, 4), c = spiral(Math.PI * 1.33, 26, 84, 4);
+        pom.innerHTML =
+          `<circle cx="${CX}" cy="${CY}" r="104" fill="url(#gPom)"/>` +
+          `<path d="${c}" fill="none" stroke="#b9780f" stroke-width="34" stroke-linecap="round" opacity="0.5"/>` +
+          `<path d="${b}" fill="none" stroke="url(#gPom)" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/>` +
+          `<path d="${a}" fill="none" stroke="url(#gPom)" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>` +
+          `<path d="${a}" fill="none" stroke="#fff0a8" stroke-width="46" stroke-dasharray="1 3.6" stroke-linecap="round" opacity="0.32"/>` +
+          `<path d="${b}" fill="none" stroke="#9a6209" stroke-width="30" stroke-dasharray="1.5 8" stroke-linecap="round" opacity="0.26"/>` +
+          `<ellipse cx="${CX - 34}" cy="${CY - 42}" rx="52" ry="36" transform="rotate(-30 ${CX - 34} ${CY - 42})" fill="#fff6c4" opacity="0.22"/>` +
+          `<circle cx="${CX + 28}" cy="${CY + 40}" r="70" fill="none" stroke="#8a5408" stroke-width="40" opacity="0.1"/>`;
+      })();
+
+      // ---- Línea de tiempo (todo función del tiempo) ----
+      const tl = gsap.timeline({ paused: true });
+
+      gsap.set("#flower", { svgOrigin: CX + " " + CY, rotation: -12, scale: 0.85, opacity: 1 });
+      gsap.set("#cam", { svgOrigin: CX + " " + CY });
+      gsap.set("#pom", { svgOrigin: CX + " " + CY, scale: 0 });
+
+      const all = outer.concat(inner);
+      all.forEach((p, i) => {
+        const bud = p.a * 0.24; // casi cerrados, apuntando hacia arriba
+        gsap.set(p.g, { svgOrigin: CX + " " + CY, rotation: bud, scaleX: 0.55, scaleY: 0.86 });
+      });
+
+      // 0 - 0.8 s: tallo, hojas, capullo
+            leaves.forEach((l, i) => tl.fromTo(l, { scale: 0.55 }, { scale: 1, duration: 0.8, ease: "power2.out" }, 0.1 + i * 0.12));
+
+      // 0.8 - 3.6 s: florece
+      tl.to("#flower", { rotation: 0, scale: 1, duration: 3.2, ease: "power2.out" }, 0.4);
+      const order = (arr) => arr.map((p, i) => i).sort((i, j) => Math.abs(arr[i].a) - Math.abs(arr[j].a) || arr[i].a - arr[j].a);
+      order(outer).forEach((idx, r) => {
+        tl.to(outer[idx].g, { rotation: outer[idx].a, scaleX: 1, scaleY: 1, duration: 1.5, ease: "back.out(1.3)" }, 0.4 + r * 0.09);
+      });
+      order(inner).forEach((idx, r) => {
+        tl.to(inner[idx].g, { rotation: inner[idx].a, scaleX: 1, scaleY: 1, duration: 1.5, ease: "back.out(1.3)" }, 1.3 + r * 0.1);
+      });
+
+      // 3.0 - 4.0 s: se infla el pompón
+      tl.to("#pom", { scale: 1.08, duration: 0.7, ease: "power2.out" }, 3.0);
+      tl.to("#pom", { scale: 1, duration: 0.3, ease: "power1.inOut" }, 3.7);
+
+      // 4.0 - 5.0 s: la cámara se acerca al centro
+      tl.to("#cam", { scale: 1.35, duration: 0.9, ease: "power2.inOut" }, 4.0);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

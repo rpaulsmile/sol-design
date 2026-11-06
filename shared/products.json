@@ -1,0 +1,246 @@
+{
+    "_nota":  "Los campos con TODO son marcadores. Reemplazar cuando la clienta pase los datos reales. precio null = se muestra \u0027Consultar precio\u0027.",
+    "marca":  {
+                  "nombre":  "Sol Design",
+                  "lema":  "Hecho a mano con amor",
+                  "duena":  "Sol",
+                  "whatsapp":  "593000000000",
+                  "_whatsapp_todo":  "TODO: número real, formato internacional sin + ni espacios (Ecuador = 593 + número sin el 0 inicial)",
+                  "instagram":  "solrovi.93",
+                  "instagramUrl":  "https://www.instagram.com/solrovi.93/",
+                  "ciudad":  "Guayaquil, Ecuador",
+                  "bio":  "Bienvenido al universo de Sol Design. Nos inspira la calidez del sol y lo natural, y estoy lista para ayudarte a encontrar la pieza perfecta para ti.",
+                  "mensajeBase":  "¡Hola Sol Design! 🌸 Me interesa: {producto}. ¿Está disponible?",
+                  "mensajeGeneral":  "¡Hola Sol Design! 🌸 Vi su catálogo y quiero hacer un pedido.",
+                  "_inventado":  "MVP: duena y precios (USD) inventados el 2026-11-06; reemplazar con datos reales."
+              },
+    "categorias":  [
+                       {
+                           "id":  "macetitas",
+                           "nombre":  "Macetitas"
+                       },
+                       {
+                           "id":  "flores",
+                           "nombre":  "Flores sueltas"
+                       },
+                       {
+                           "id":  "lapiceros",
+                           "nombre":  "Lapiceros"
+                       },
+                       {
+                           "id":  "cuadros",
+                           "nombre":  "Cuadros"
+                       },
+                       {
+                           "id":  "arreglos",
+                           "nombre":  "Arreglos y canastas"
+                       },
+                       {
+                           "id":  "coronas",
+                           "nombre":  "Coronas personalizadas"
+                       }
+                   ],
+    "productos":  [
+                      {
+                          "id":  "maceta-rosa-roja",
+                          "nombre":  "Macetita Rosa Roja",
+                          "categoria":  "macetitas",
+                          "descripcion":  "Rosa roja de chenille con campanita amarilla, en maceta azul con musgo.",
+                          "precio":  8,
+                          "colores":  [
+                                          "#E8261C",
+                                          "#1F6FD1",
+                                          "#5E7A2E"
+                                      ],
+                          "imagen":  "assets/img/maceta-rosa-roja-fondo",
+                          "imagenRecorte":  "assets/recortes/flor-rosa-roja",
+                          "destacado":  true,
+                          "imagenOriginal":  "assets/img/maceta-rosa-roja",
+                          "_imagenEditadaIA":  "Fondo crema hecho con Flow (Nano Banana 2.1); producto sin cambios, verificado a ojo."
+                      },
+                      {
+                          "id":  "maceta-margarita-lila",
+                          "nombre":  "Macetita Margarita Lila",
+                          "categoria":  "macetitas",
+                          "descripcion":  "Margarita lila con tulipán y capullos celestes, en maceta oliva con cinta café.",
+                          "precio":  8,
+                          "colores":  [
+                                          "#9B6FD6",
+                                          "#7FD1D9",
+                                          "#7A6A1E"
+                                      ],
+                          "imagen":  "assets/img/maceta-margarita-lila-fondo",
+                          "imagenRecorte":  "assets/recortes/flor-margarita",
+                          "destacado":  true,
+                          "imagenOriginal":  "assets/img/maceta-margarita-lila",
+                          "_imagenEditadaIA":  "Fondo crema hecho con Flow (Nano Banana 2.1); producto sin cambios, verificado a ojo."
+                      },
+                      {
+                          "id":  "lapiceros-flor-perlas",
+                          "nombre":  "Lapicero Flor con Perlas",
+                          "categoria":  "lapiceros",
+                          "descripcion":  "Lapicero forrado en chenille con flor y perlitas. Colores surtidos, en tarjeta de regalo.",
+                          "precio":  3.5,
+                          "colores":  [
+                                          "#F5E11A",
+                                          "#F2A7B5",
+                                          "#6ED3E0",
+                                          "#9B7BE0"
+                                      ],
+                          "imagen":  "assets/img/lapiceros-flor-perlas-fondo",
+                          "imagenRecorte":  null,
+                          "destacado":  false,
+                          "imagenOriginal":  "assets/img/lapiceros-flor-perlas",
+                          "_imagenEditadaIA":  "Fondo crema hecho con Flow (Nano Banana 2.1); producto sin cambios, verificado a ojo."
+                      },
+                      {
+                          "id":  "gerbera-rosada-tarjeta",
+                          "nombre":  "Gerbera Rosada",
+                          "categoria":  "flores",
+                          "descripcion":  "Gerbera rosada de tallo largo con hoja, presentada en tarjeta amarilla.",
+                          "precio":  4,
+                          "colores":  [
+                                          "#F4A3C0",
+                                          "#E8318A",
+                                          "#1E8A3A"
+                                      ],
+                          "imagen":  "assets/img/gerbera-rosada-tarjeta-fondo",
+                          "imagenRecorte":  "assets/recortes/flor-gerbera",
+                          "destacado":  true,
+                          "imagenOriginal":  "assets/img/gerbera-rosada-tarjeta",
+                          "_imagenEditadaIA":  "Fondo crema hecho con Flow (Nano Banana 2.1); producto sin cambios, verificado a ojo."
+                      },
+                      {
+                          "id":  "cuadro-lirio-rojo",
+                          "nombre":  "Cuadro Lirio Rojo con Luces",
+                          "categoria":  "cuadros",
+                          "descripcion":  "Cuadro con lirio rojo y florecitas en canasta tejida, con lucecitas LED.",
+                          "precio":  25,
+                          "colores":  [
+                                          "#E01B24",
+                                          "#F7D9E3",
+                                          "#C9A55A"
+                                      ],
+                          "imagen":  "assets/img/cuadro-lirio-rojo-fondo",
+                          "imagenRecorte":  null,
+                          "destacado":  true,
+                          "imagenOriginal":  "assets/img/cuadro-lirio-rojo",
+                          "_imagenEditadaIA":  "Fondo crema hecho con Flow (Nano Banana 2.1); producto sin cambios, verificado a ojo."
+                      },
+                      {
+                          "id":  "canasta-lirios",
+                          "nombre":  "Canasta de Lirios",
+                          "categoria":  "arreglos",
+                          "descripcion":  "Canasta con lirios y flores surtidas. (Visto en el video; falta foto.)",
+                          "precio":  30,
+                          "colores":  [
+                                          "#8E1B2E",
+                                          "#F5A623",
+                                          "#3FB4E0"
+                                      ],
+                          "imagen":  null,
+                          "imagenRecorte":  null,
+                          "destacado":  false,
+                          "_pendiente":  "foto"
+                      },
+                      {
+                          "id":  "canastita-flor-amarilla",
+                          "nombre":  "Canastita Flor Amarilla",
+                          "categoria":  "arreglos",
+                          "descripcion":  "Canastita tejida con flor amarilla y capullos. (Visto en el video; falta foto.)",
+                          "precio":  12,
+                          "colores":  [
+                                          "#F5D547",
+                                          "#E98BB0",
+                                          "#6B5A3A"
+                                      ],
+                          "imagen":  null,
+                          "imagenRecorte":  null,
+                          "destacado":  false,
+                          "_pendiente":  "foto"
+                      },
+                      {
+                          "id":  "ramo-rosas-rojas",
+                          "nombre":  "Ramo de Rosas Rojas",
+                          "categoria":  "arreglos",
+                          "descripcion":  "Ramo de rosas rojas de chenille. (Visto en el video; falta foto.)",
+                          "precio":  20,
+                          "colores":  [
+                                          "#D7141E",
+                                          "#2E9B3A"
+                                      ],
+                          "imagen":  null,
+                          "imagenRecorte":  null,
+                          "destacado":  false,
+                          "_pendiente":  "foto"
+                      },
+                      {
+                          "id":  "cuadro-girasoles-luminoso",
+                          "nombre":  "Cuadro Girasoles Luminoso",
+                          "categoria":  "cuadros",
+                          "descripcion":  "Ramo de girasoles y margaritas en cuadro, felpa premium y luces LED sutiles.",
+                          "precio":  28,
+                          "colores":  [
+                                          "#F2A20C",
+                                          "#FFFFFF",
+                                          "#7A9A4A"
+                                      ],
+                          "imagen":  "assets/img/cuadro-girasoles-luminoso",
+                          "imagenRecorte":  null,
+                          "destacado":  true,
+                          "_imagenIA":  "Imagen del IG con marca de Gemini: confirmar con la clienta que el producto existe y se ve así."
+                      },
+                      {
+                          "id":  "mini-macetero-rosa-roja",
+                          "nombre":  "Mini Macetero Personalizable",
+                          "categoria":  "macetitas",
+                          "descripcion":  "Mini macetero con rosa roja. Personalízalo con tu flor favorita en el color que desees.",
+                          "precio":  6,
+                          "personalizable":  true,
+                          "colores":  [
+                                          "#E01B24",
+                                          "#6B4E12",
+                                          "#F3E3EE"
+                                      ],
+                          "imagen":  "assets/img/mini-macetero-rosa-roja-fondo",
+                          "imagenRecorte":  null,
+                          "destacado":  true,
+                          "imagenOriginal":  "assets/img/mini-macetero-rosa-roja",
+                          "_imagenEditadaIA":  "Fondo crema hecho con Flow (Nano Banana 2.1); producto sin cambios, verificado a ojo."
+                      },
+                      {
+                          "id":  "corona-infantil-personalizada",
+                          "nombre":  "Corona Infantil Personalizada",
+                          "categoria":  "coronas",
+                          "descripcion":  "Corona floral con el nombre que elijas, en el color y flor que desees. Colección Maternidad.",
+                          "precio":  15,
+                          "personalizable":  true,
+                          "colores":  [
+                                          "#D98AA0",
+                                          "#F3EBDD",
+                                          "#FFFFFF"
+                                      ],
+                          "imagen":  "assets/img/corona-infantil-seli",
+                          "imagenRecorte":  null,
+                          "destacado":  true,
+                          "_imagenIA":  "Imagen del IG con marca de Gemini. La versión \u0027Isabella\u0027 (lana verde/crema) parece 100% IA: no usar sin confirmar."
+                      },
+                      {
+                          "id":  "ramo-para-el",
+                          "nombre":  "Ramo para Él",
+                          "categoria":  "arreglos",
+                          "descripcion":  "Ramo temático para regalar a él (autitos, fútbol). (Reel de IG: la portada es solo el logo; falta foto.)",
+                          "precio":  22,
+                          "personalizable":  true,
+                          "colores":  [
+                                          "#1F4FD1",
+                                          "#E8261C"
+                                      ],
+                          "imagen":  null,
+                          "imagenRecorte":  null,
+                          "destacado":  false,
+                          "_pendiente":  "captura del reel IG Dd6TGlIxLA4"
+                      }
+                  ],
+    "_formatosImagen":  "imagen + .webp (1024), -800.webp, .jpg | imagenRecorte + .webp/.png (transparente, 600px)"
+}

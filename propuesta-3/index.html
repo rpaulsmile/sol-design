@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="es-EC">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sol Design | Flores de chenille hechas a mano en Guayaquil</title>
+<meta name="description" content="Flores, macetitas y cuadros de chenille hechos a mano en Guayaquil. Arma tu ramo y pídelo por WhatsApp.">
+<meta name="theme-color" content="#FCF0E0">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<script>
+document.documentElement.classList.add('js');
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.documentElement.classList.add('motion');
+  setTimeout(function () { if (!window.gsap) { document.documentElement.classList.remove('motion'); } }, 4500);
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/motion.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2a9.9 9.9 0 0 0-8.45 15.04L2 22l5.1-1.34A9.9 9.9 0 1 0 12.04 2Zm0 1.8a8.1 8.1 0 1 1-4.1 15.08l-.3-.17-3 .78.8-2.92-.2-.3A8.1 8.1 0 0 1 12.04 3.8Zm-3.2 3.7c-.2 0-.5.07-.75.35-.26.28-.98.96-.98 2.34s1 2.7 1.14 2.9c.14.18 1.95 3.1 4.8 4.22 2.37.93 2.85.75 3.36.7.52-.05 1.66-.68 1.9-1.33.23-.65.23-1.2.16-1.33-.07-.12-.26-.2-.54-.33-.28-.14-1.66-.82-1.92-.91-.26-.1-.44-.14-.63.14-.19.28-.72.9-.88 1.1-.17.18-.33.2-.6.07-.3-.14-1.2-.44-2.28-1.4-.84-.75-1.4-1.67-1.57-1.95-.16-.28-.02-.43.12-.57.13-.12.28-.33.42-.5.14-.16.19-.28.28-.47.1-.19.05-.35-.02-.5-.07-.14-.63-1.54-.87-2.1-.23-.54-.46-.47-.63-.48h-.54Z"/></symbol>
+    <symbol id="i-fl" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="12" cy="5" r="3.6"/><circle cx="19" cy="10.2" r="3.6"/><circle cx="16.4" cy="18.6" r="3.6"/><circle cx="7.6" cy="18.6" r="3.6"/><circle cx="5" cy="10.2" r="3.6"/></g><circle cx="12" cy="12.4" r="3" fill="#F5D547"/></symbol>
+    <symbol id="i-estrella" viewBox="0 0 24 24"><path fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="m12 3 2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.5 6.7 19.4l1.2-6L3.4 9.3l6-.7Z"/></symbol>
+    <symbol id="i-pausa" viewBox="0 0 24 24"><path d="M9 6v12M15 6v12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8.5 5.5v13l10-6.5z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-izq" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-der" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<!-- El hilo: un SVG del alto de la página; main.js calcula el recorrido -->
+<svg class="hilo" data-hilo aria-hidden="true" focusable="false">
+  <path class="hilo__borde" data-hilo-b d="M0 0"/>
+  <path class="hilo__base" data-hilo-a d="M0 0"/>
+  <path class="hilo__luz" data-hilo-l d="M0 0"/>
+  <circle class="hilo__centro" data-hilo-c r="0" cx="0" cy="0"/>
+</svg>
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<!-- ============ NAV ============ -->
+<header class="nav" data-nav>
+  <div class="nav__in">
+    <a class="nav__logo" href="#inicio" aria-label="Sol Design, inicio">
+      <img src="img/sol-recorte.webp" alt="" width="44" height="44"><span>Sol Design</span>
+    </a>
+    <nav class="nav__links" aria-label="Principal">
+      <a class="nav__enlace" href="#coleccion">Colección<svg class="gar" viewBox="0 0 60 8" aria-hidden="true"><path d="M3 4c6-4 9 4 15 0s9-4 15 0 9 4 15 0 6-2 9-1" pathLength="1"/></svg></a>
+      <a class="nav__enlace" href="#arma">Arma tu ramo<svg class="gar" viewBox="0 0 60 8" aria-hidden="true"><path d="M3 4c6-4 9 4 15 0s9-4 15 0 9 4 15 0 6-2 9-1" pathLength="1"/></svg></a>
+      <a class="nav__enlace" href="#como-se-hace">Cómo se hace<svg class="gar" viewBox="0 0 60 8" aria-hidden="true"><path d="M3 4c6-4 9 4 15 0s9-4 15 0 9 4 15 0 6-2 9-1" pathLength="1"/></svg></a>
+      <a class="nav__enlace" href="#ocasiones">Ocasiones<svg class="gar" viewBox="0 0 60 8" aria-hidden="true"><path d="M3 4c6-4 9 4 15 0s9-4 15 0 9 4 15 0 6-2 9-1" pathLength="1"/></svg></a>
+      <a class="nav__enlace" href="#preguntas">Preguntas<svg class="gar" viewBox="0 0 60 8" aria-hidden="true"><path d="M3 4c6-4 9 4 15 0s9-4 15 0 9 4 15 0 6-2 9-1" pathLength="1"/></svg></a>
+    </nav>
+    <div class="nav__acciones">
+      <a class="btn btn--wa btn--c" href="https://wa.me/593000000000" data-wa="general" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp, se abre en una pestaña nueva"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span class="so-m">Pedir</span><span class="so-d">Pedir por WhatsApp</span></a>
+      <button class="nav__menu" type="button" aria-expanded="false" aria-controls="menu-movil" aria-label="Abrir menú" data-menu-btn><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu-movil" data-menu role="dialog" aria-modal="true" aria-label="Menú" hidden>
+  <nav class="menu__nav" aria-label="Menú móvil">
+    <a href="#coleccion">Colección</a>
+    <a href="#arma">Arma tu ramo</a>
+    <a href="#como-se-hace">Cómo se hace</a>
+    <a href="#ocasiones">Ocasiones</a>
+    <a href="#preguntas">Preguntas</a>
+  </nav>
+  <a class="btn btn--wa" href="https://wa.me/593000000000" data-wa="general" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp, se abre en una pestaña nueva"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span>Pedir por WhatsApp</span></a>
+</div>
+
+<main id="contenido">
+
+<!-- ============ HERO "EL HILO" ============ -->
+<section class="hero" id="inicio" aria-labelledby="hero-t">
+  <i class="conf conf--a" aria-hidden="true"></i><i class="conf conf--b" aria-hidden="true"></i><i class="conf conf--c" aria-hidden="true"></i><i class="conf conf--d" aria-hidden="true"></i><i class="conf conf--e" aria-hidden="true"></i>
+  <span class="fl fl--rosa" aria-hidden="true"><img src="../assets/recortes/flor-rosa-roja.webp" alt="" width="600" height="433"></span>
+  <span class="fl fl--gerbera" aria-hidden="true"><img src="../assets/recortes/flor-gerbera.webp" alt="" width="600" height="579"></span>
+  <span class="fl fl--margarita" aria-hidden="true"><img src="../assets/recortes/flor-margarita.webp" alt="" width="582" height="600"></span>
+  <div class="contenedor hero__in">
+    <div class="hero__firmas">
+      <span class="hero__sol" data-sol aria-hidden="true"></span>
+      <div class="hero__logo"><div class="hero__logo-in" data-pop><img src="img/logo-sol.webp" alt="Sol Design, flores de chenille hechas a mano" width="524" height="483" fetchpriority="high"></div></div>
+    </div>
+    <p class="etiqueta hero__et">Hecho a mano en Guayaquil</p>
+    <h1 class="display" id="hero-t" data-saltar>Flores que no se <span class="blob blob--amarillo">marchitan</span></h1>
+    <p class="bajada hero__baj">Flores, macetitas y cuadros de chenille, hechos a mano y por encargo.</p>
+    <div class="hero__cta">
+      <a class="btn btn--wa" href="https://wa.me/593000000000" data-wa="general" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp, se abre en una pestaña nueva"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span>Pedir por WhatsApp</span></a>
+      <a class="btn btn--blanco" href="#coleccion"><span>Ver las flores</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CINTA ============ -->
+<div class="cinta" aria-label="Hecho a mano, a tu gusto, para regalar, no se marchitan">
+  <div class="cinta__pista" data-cinta>
+    <ul class="cinta__lista">
+      <li>hecho a mano</li><li class="cinta__f" aria-hidden="true"><svg><use href="#i-fl"/></svg></li>
+      <li>a tu gusto</li><li class="cinta__f" aria-hidden="true"><svg><use href="#i-fl"/></svg></li>
+      <li>para regalar</li><li class="cinta__f" aria-hidden="true"><svg><use href="#i-fl"/></svg></li>
+      <li>no se marchitan</li><li class="cinta__f" aria-hidden="true"><svg><use href="#i-fl"/></svg></li>
+    </ul>
+    <ul class="cinta__lista cinta__copia" aria-hidden="true">
+      <li>hecho a mano</li><li class="cinta__f"><svg><use href="#i-fl"/></svg></li>
+      <li>a tu gusto</li><li class="cinta__f"><svg><use href="#i-fl"/></svg></li>
+      <li>para regalar</li><li class="cinta__f"><svg><use href="#i-fl"/></svg></li>
+      <li>no se marchitan</li><li class="cinta__f"><svg><use href="#i-fl"/></svg></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============ QUIÉNES SOMOS ============ -->
+<section class="sec onda quienes" id="quienes" aria-labelledby="q-t">
+  <div class="contenedor quienes__in">
+    <div class="quienes__txt">
+      <p class="etiqueta">Quiénes somos</p>
+      <h2 class="headline" id="q-t" data-saltar>Cada flor la hace <span class="nb"><span class="blob blob--rosa">Sol</span>,</span> a mano, con chenille y mucho <span class="nb"><span class="blob blob--turquesa">cariño</span>.</span></h2>
+      <p class="quienes__p">Desde Guayaquil, Sol dobla y tuerce cada pétalo, uno por uno. Por eso no hay dos iguales, y por eso nunca se marchitan.</p>
+    </div>
+    <div class="quienes__col">
+      <div class="polaroid" data-polaroid>
+        <div class="polaroid__in" data-pop>
+          <div class="polaroid__marco">
+            <video data-video muted playsinline loop preload="none" poster="../assets/video/hero-poster.webp" width="576" height="1024" aria-label="Sol dobla los pétalos de una flor de chenille" tabindex="-1"></video>
+            <button class="vid-btn" type="button" data-video-play aria-label="Pausar video"><svg class="ico ico--pausa" aria-hidden="true"><use href="#i-pausa"/></svg><svg class="ico ico--play" aria-hidden="true"><use href="#i-play"/></svg></button>
+          </div>
+          <p class="polaroid__pie">Así nace una flor</p>
+        </div>
+        <span class="stk stk--1" aria-hidden="true"><img src="../assets/recortes/flor-margarita.webp" alt="" width="582" height="600" loading="lazy"></span>
+        <span class="stk stk--2" aria-hidden="true"><img src="../assets/recortes/flor-gerbera.webp" alt="" width="600" height="579" loading="lazy"></span>
+        <span class="stk stk--3" aria-hidden="true"><img src="../assets/recortes/flor-rosa-roja.webp" alt="" width="600" height="433" loading="lazy"></span>
+      </div>
+      <ul class="fotos">
+        <li class="fotos__i fotos__i--1"><div class="sticker c-lila" data-pop><img src="../assets/img/lapiceros-flor-perlas-800.webp" alt="Lapiceros forrados en chenille con flor y perlitas, en tarjeta de regalo" width="800" height="800" loading="lazy" decoding="async"></div></li>
+        <li class="fotos__i fotos__i--2"><div class="sticker c-amarillo" data-pop><img src="../assets/img/cuadro-lirio-rojo-800.webp" alt="Cuadro con un lirio rojo de chenille en canasta tejida y lucecitas" width="800" height="800" loading="lazy" decoding="async"></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COLECCIÓN ============ -->
+<section class="sec onda coleccion" id="coleccion" aria-labelledby="col-t">
+  <div class="contenedor">
+    <div class="col__cab">
+      <h2 class="headline" id="col-t" data-saltar data-ancla="titulo">Nuestras flores</h2>
+      <p class="col__cuenta" data-col-cuenta aria-live="polite">6 piezas</p>
+    </div>
+    <div class="chips" data-chips role="group" aria-label="Filtrar por categoría"></div>
+    <ul class="grid" data-grid></ul>
+    <div class="vacio" data-vacio hidden>
+      <svg class="vacio__f" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 118c-4-20 6-34 0-52" fill="none" stroke="#2E7D4F" stroke-width="7" stroke-linecap="round"/><path d="M60 92c-14-2-22-12-22-22 12 0 20 8 22 22Z" fill="#2E7D4F"/><g fill="#F2A7B5" stroke="#3A2318" stroke-width="2.5"><circle cx="60" cy="22" r="14"/><circle cx="82" cy="38" r="14"/><circle cx="74" cy="62" r="14"/><circle cx="46" cy="62" r="14"/><circle cx="38" cy="38" r="14"/></g><circle cx="60" cy="44" r="12" fill="#F5D547" stroke="#3A2318" stroke-width="2.5"/></svg>
+      <p class="bajada">¡Esta todavía no la tenemos, pero te la hacemos!</p>
+      <a class="btn btn--wa" href="https://wa.me/593000000000" data-wa="general" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp, se abre en una pestaña nueva"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span>Pedir por WhatsApp</span></a>
+    </div>
+    <noscript><p class="bajada">Para ver las flores activa JavaScript, o escríbenos por <a class="enlace" href="https://wa.me/593000000000">WhatsApp</a>.</p></noscript>
+  </div>
+</section>
+
+<!-- ============ ARMA TU RAMO ============ -->
+<section class="sec onda arma" id="arma" aria-labelledby="arma-t">
+  <div class="contenedor">
+    <div class="arma__cab">
+      <p class="etiqueta">Juguemos</p>
+      <h2 class="headline" id="arma-t" data-saltar>Arma tu <span class="blob blob--lila">ramo</span></h2>
+      <p class="bajada">Elige hasta 7 flores y un color. El mensaje se arma solito.</p>
+    </div>
+    <div class="arma__in">
+      <div class="arma__ctl">
+        <p class="arma__sub" id="arma-flores">1. Elige tus flores</p>
+        <div class="arma__flores" role="group" aria-labelledby="arma-flores" data-arma-flores></div>
+        <p class="arma__sub" id="arma-color">2. Elige el color</p>
+        <div class="muestras" role="radiogroup" aria-labelledby="arma-color" data-arma-colores></div>
+        <div class="arma__acc">
+          <button class="btn btn--chico" type="button" data-arma-quitar><span>Quitar la última</span></button>
+          <button class="btn btn--chico" type="button" data-arma-reset><span>Empezar de nuevo</span></button>
+        </div>
+      </div>
+      <div class="arma__escena">
+        <div class="maceta" data-maceta>
+          <svg class="maceta__tallos" viewBox="0 0 200 200" aria-hidden="true" data-tallos></svg>
+          <svg class="maceta__pot" viewBox="0 0 200 200" aria-hidden="true"><path d="M52 132h96l-10 62a8 8 0 0 1-8 6H70a8 8 0 0 1-8-6Z" fill="#E5733A" stroke="#3A2318" stroke-width="3" stroke-linejoin="round"/><rect x="44" y="120" width="112" height="22" rx="9" fill="#F5D547" stroke="#3A2318" stroke-width="3"/><circle cx="84" cy="168" r="5" fill="#FFF3E6" opacity=".7"/><circle cx="112" cy="156" r="4" fill="#FFF3E6" opacity=".7"/><circle cx="124" cy="178" r="5" fill="#FFF3E6" opacity=".7"/></svg>
+          <div class="maceta__flores" data-maceta-flores></div>
+          <p class="maceta__vacia" data-maceta-vacia>Tu maceta está vacía.<br>¡Añade la primera flor!</p>
+        </div>
+        <p class="arma__estado" data-arma-estado role="status" aria-live="polite">Tu ramo está vacío</p>
+      </div>
+    </div>
+    <div class="arma__msg">
+      <p class="etiqueta">Tu mensaje</p>
+      <p class="arma__texto" data-arma-msg></p>
+      <a class="btn btn--wa" href="https://wa.me/593000000000" data-arma-btn target="_blank" rel="noopener" aria-label="¡Quiero este ramo! Pedir por WhatsApp, se abre en una pestaña nueva"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span>¡Quiero este ramo!</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CÓMO SE HACE ============ -->
+<section class="sec onda como" id="como-se-hace" aria-labelledby="como-t">
+  <div class="contenedor">
+    <p class="etiqueta">Paso a paso</p>
+    <h2 class="headline" id="como-t" data-saltar>Cómo se <span class="blob blob--verde">hace</span></h2>
+    <ol class="pasos" data-pasos>
+      <li class="paso"><div class="sticker c-rosa" data-pop><span class="paso__n" aria-hidden="true">1</span><img src="../assets/img/lapiceros-flor-perlas-800.webp" alt="Lapiceros forrados en chenille con flores y perlitas, listos para armar" width="800" height="800" loading="lazy" decoding="async"><h3 class="card-title">Elegimos el chenille</h3><p>Escogemos los colores y las texturas más felpudas, tal como los pediste.</p></div></li>
+      <li class="paso"><div class="sticker c-amarillo" data-pop><span class="paso__n" aria-hidden="true">2</span><img src="../assets/img/gerbera-rosada-tarjeta-800.webp" alt="Gerbera rosada de chenille con pétalos doblados a mano" width="800" height="800" loading="lazy" decoding="async"><h3 class="card-title">Le damos forma</h3><p>Pétalo por pétalo, doblado a mano alrededor del alambre hasta que la flor queda redonda.</p></div></li>
+      <li class="paso"><div class="sticker c-turquesa" data-pop><span class="paso__n" aria-hidden="true">3</span><img src="../assets/img/maceta-rosa-roja-800.webp" alt="Macetita con una rosa roja de chenille en maceta azul con musgo" width="800" height="800" loading="lazy" decoding="async"><h3 class="card-title">La presentamos</h3><p>La acomodamos entre musgo, con su cinta y el sello de Sol Design, lista para regalar.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ OCASIONES ============ -->
+<section class="sec onda ocasiones" id="ocasiones" aria-labelledby="oc-t">
+  <div class="contenedor">
+    <div class="oc__cab">
+      <div>
+        <h2 class="headline" id="oc-t" data-saltar>Para cada <span class="blob blob--amarillo">ocasión</span></h2>
+        <p class="bajada">Dinos la fecha y te ayudamos a elegir.</p>
+      </div>
+      <div class="oc__flechas">
+        <button class="flecha" type="button" data-oc-prev aria-label="Ocasiones anteriores"><svg class="ico" aria-hidden="true"><use href="#i-izq"/></svg></button>
+        <button class="flecha" type="button" data-oc-next aria-label="Más ocasiones"><svg class="ico" aria-hidden="true"><use href="#i-der"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <div class="oc__riel" data-oc-riel tabindex="0" role="region" aria-label="Ocasiones, desliza para ver más">
+    <ul class="oc__lista">
+      <li class="oc"><div class="sticker c-rosa" data-pop>
+        <svg class="oc__ico" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="#3A2318" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 56h40V36H12z" fill="#fff"/><path d="M12 44c7 5 13-5 20 0s13-5 20 0"/><path d="M32 36V22"/><path d="M32 10c4 4 4 8 0 12-4-4-4-8 0-12Z" fill="#F5D547"/></g></svg>
+        <h3 class="card-title">Cumpleaños</h3><p>Un detalle que se queda en su escritorio para siempre.</p>
+        <a class="btn btn--wa btn--chico" href="https://wa.me/593000000000" data-wa="ocasion" data-mensaje="¡Hola Sol Design! Quiero algo para un cumpleaños. ¿Qué me recomiendas?" data-nombre="algo para un cumpleaños" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span>Lo quiero</span></a></div></li>
+      <li class="oc"><div class="sticker c-turquesa" data-pop>
+        <svg class="oc__ico" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="#3A2318" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M32 12 6 24l26 12 26-12Z" fill="#fff"/><path d="M16 31v14c8 8 24 8 32 0V31"/><path d="M58 24v18"/><circle cx="58" cy="46" r="2.5" fill="#F5D547"/></g></svg>
+        <h3 class="card-title">Graduación</h3><p>Para celebrar el esfuerzo con algo que no se marchita.</p>
+        <a class="btn btn--wa btn--chico" href="https://wa.me/593000000000" data-wa="ocasion" data-mensaje="¡Hola Sol Design! Quiero algo para una graduación. ¿Qué me recomiendas?" data-nombre="algo para una graduación" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span>Lo quiero</span></a></div></li>
+      <li class="oc"><div class="sticker c-lila" data-pop>
+        <svg class="oc__ico" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 54C10 38 6 26 12 17c6-8 16-5 20 3 4-8 14-11 20-3 6 9 2 21-20 37Z" fill="#fff" stroke="#3A2318" stroke-width="3.5" stroke-linejoin="round"/><path d="M20 24c2-3 5-3 7-1" fill="none" stroke="#3A2318" stroke-width="3.5" stroke-linecap="round"/></svg>
+        <h3 class="card-title">San Valentín</h3><p>Rosas rojas que no se secan.</p>
+        <a class="btn btn--wa btn--chico" href="https://wa.me/593000000000" data-wa="ocasion" data-mensaje="¡Hola Sol Design! Quiero algo para San Valentín. ¿Qué me recomiendas?" data-nombre="algo para San Valentín" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span>Lo quiero</span></a></div></li>
+      <li class="oc"><div class="sticker c-amarillo" data-pop>
+        <svg class="oc__ico" viewBox="0 0 64 64" aria-hidden="true"><g stroke="#3A2318" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M32 60V36" fill="none"/><path d="M32 50c-9 0-13-6-13-11 8 0 12 4 13 11Z" fill="#2E7D4F"/><g fill="#F2A7B5"><circle cx="32" cy="12" r="8"/><circle cx="46" cy="22" r="8"/><circle cx="41" cy="36" r="8"/><circle cx="23" cy="36" r="8"/><circle cx="18" cy="22" r="8"/></g><circle cx="32" cy="26" r="7" fill="#F5D547"/></g></svg>
+        <h3 class="card-title">Día de la Madre</h3><p>Para la mamá que todo lo da, un ramo que dura.</p>
+        <a class="btn btn--wa btn--chico" href="https://wa.me/593000000000" data-wa="ocasion" data-mensaje="¡Hola Sol Design! Quiero algo para el Día de la Madre. ¿Qué me recomiendas?" data-nombre="algo para el Día de la Madre" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span>Lo quiero</span></a></div></li>
+      <li class="oc"><div class="sticker c-durazno" data-pop>
+        <svg class="oc__ico" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="#3A2318" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 46 8 22l12 10 12-16 12 16 12-10-2 24Z" fill="#F5D547"/><path d="M10 54h44"/><circle cx="8" cy="20" r="3" fill="#fff"/><circle cx="32" cy="14" r="3" fill="#fff"/><circle cx="56" cy="20" r="3" fill="#fff"/></g></svg>
+        <h3 class="card-title">Baby shower</h3><p>Coronas con su nombre y mucha ternura.</p>
+        <a class="btn btn--wa btn--chico" href="https://wa.me/593000000000" data-wa="ocasion" data-mensaje="¡Hola Sol Design! Quiero algo para un baby shower o para celebrar la maternidad. ¿Qué me recomiendas?" data-nombre="algo para un baby shower" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span>Lo quiero</span></a></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ PERSONALIZA ============ -->
+<section class="sec onda personaliza" id="personaliza" aria-labelledby="pers-t">
+  <div class="contenedor pers__in">
+    <div class="pers__txt">
+      <p class="etiqueta">A tu gusto</p>
+      <h2 class="headline" id="pers-t" data-saltar><span class="nb">¿Con su</span> <span class="nb"><span class="blob blob--rosa">nombre</span>?</span> ¡Claro!</h2>
+      <p class="pers__p">Elige la pieza, escribe el nombre y escoge el color. Sol recibe tu mensaje por WhatsApp.</p>
+      <div class="corona" aria-hidden="true">
+        <svg viewBox="0 0 320 190">
+          <path id="corona-arco" d="M62 158C80 104 240 104 258 158" fill="none"/>
+          <path d="M30 150C50 40 270 40 290 150" fill="none" stroke="#2E7D4F" stroke-width="9" stroke-linecap="round"/>
+          <g data-corona-flores stroke="#3A2318" stroke-width="2.5">
+            <circle cx="40" cy="128" r="15" fill="#F2A7B5"/><circle cx="68" cy="82" r="15" fill="#F2A7B5"/><circle cx="110" cy="56" r="15" fill="#F2A7B5"/><circle cx="210" cy="56" r="15" fill="#F2A7B5"/><circle cx="252" cy="82" r="15" fill="#F2A7B5"/><circle cx="280" cy="128" r="15" fill="#F2A7B5"/>
+          </g>
+          <g fill="#F5D547" stroke="#3A2318" stroke-width="2.5"><circle cx="40" cy="128" r="5"/><circle cx="68" cy="82" r="5"/><circle cx="110" cy="56" r="5"/><circle cx="210" cy="56" r="5"/><circle cx="252" cy="82" r="5"/><circle cx="280" cy="128" r="5"/></g>
+          <text class="corona__t" data-corona-nombre><textPath href="#corona-arco" startOffset="50%" text-anchor="middle">Tu nombre</textPath></text>
+        </svg>
+      </div>
+    </div>
+    <form class="ficha" data-pers novalidate>
+      <div class="ficha__f">
+        <label for="pers-pieza">Pieza</label>
+        <select class="campo" id="pers-pieza" name="pieza" data-pers-pieza></select>
+      </div>
+      <div class="ficha__f">
+        <label for="pers-nombre">Nombre</label>
+        <input class="campo" id="pers-nombre" name="nombre" type="text" maxlength="24" autocomplete="off" placeholder="Por ejemplo: Isabella" data-pers-nombre>
+      </div>
+      <fieldset class="ficha__f">
+        <legend>Color</legend>
+        <div class="muestras" data-pers-colores></div>
+      </fieldset>
+      <div class="ficha__f">
+        <p class="ficha__l">Tu mensaje</p>
+        <p class="ficha__msg" data-pers-msg aria-live="polite"></p>
+      </div>
+      <a class="btn btn--wa btn--bloque" href="https://wa.me/593000000000" data-pers-btn target="_blank" rel="noopener" aria-label="Pedir por WhatsApp, se abre en una pestaña nueva"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span>Pedir por WhatsApp</span></a>
+    </form>
+  </div>
+</section>
+
+<!-- ============ PREGUNTAS ============ -->
+<section class="sec onda faq" id="preguntas" aria-labelledby="faq-t">
+  <div class="contenedor faq__in">
+    <div class="faq__cab">
+      <p class="etiqueta">Antes de pedir</p>
+      <h2 class="headline" id="faq-t" data-saltar>Preguntas <span class="blob blob--turquesa">frecuentes</span></h2>
+    </div>
+    <div class="faq__lista">
+      <div class="faq__item" data-pop>
+        <h3><button type="button" class="faq__btn" aria-expanded="false" aria-controls="faq-r1" id="faq-b1"><span>¿Hacen envíos en Guayaquil?</span><svg class="faq__mas" aria-hidden="true"><use href="#i-fl"/></svg></button></h3>
+        <div class="faq__resp" id="faq-r1" role="region" aria-labelledby="faq-b1"><div><p>Sí. Enviamos a toda la ciudad por moto o encomienda y coordinamos la entrega por WhatsApp. También puedes retirar tu pedido en el norte de Guayaquil, sin costo.</p></div></div>
+      </div>
+      <div class="faq__item" data-pop>
+        <h3><button type="button" class="faq__btn" aria-expanded="false" aria-controls="faq-r2" id="faq-b2"><span>¿Cuánto demora un pedido?</span><svg class="faq__mas" aria-hidden="true"><use href="#i-fl"/></svg></button></h3>
+        <div class="faq__resp" id="faq-r2" role="region" aria-labelledby="faq-b2"><div><p>Las piezas que ya tenemos listas salen en 1 o 2 días. Si la hacemos a tu gusto, toma de 3 a 5 días, según el tamaño. Si tu fecha es especial, avísanos con tiempo.</p></div></div>
+      </div>
+      <div class="faq__item" data-pop>
+        <h3><button type="button" class="faq__btn" aria-expanded="false" aria-controls="faq-r3" id="faq-b3"><span>¿Puedo personalizar el color y el nombre?</span><svg class="faq__mas" aria-hidden="true"><use href="#i-fl"/></svg></button></h3>
+        <div class="faq__resp" id="faq-r3" role="region" aria-labelledby="faq-b3"><div><p>Sí. Cuéntanos el color y el nombre y la hacemos para ti. Las coronas, los maceteros y los ramos se pueden personalizar sin costo extra en la mayoría de los casos.</p></div></div>
+      </div>
+      <div class="faq__item" data-pop>
+        <h3><button type="button" class="faq__btn" aria-expanded="false" aria-controls="faq-r4" id="faq-b4"><span>¿Cómo cuido mi flor de chenille?</span><svg class="faq__mas" aria-hidden="true"><use href="#i-fl"/></svg></button></h3>
+        <div class="faq__resp" id="faq-r4" role="region" aria-labelledby="faq-b4"><div><p>Evita el agua y el sol directo. Para quitar el polvo, pásale un cepillo suave o un secador en aire frío. Con ese cuidado dura años.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER: EL PRADO ============ -->
+<footer class="footer onda" data-footer>
+  <svg class="prado" data-prado viewBox="0 0 1200 160" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg>
+  <div class="contenedor footer__in">
+    <span class="footer__flor" data-flor aria-hidden="true"></span>
+    <div class="footer__txt">
+      <div class="footer__logo" data-pop><img src="img/logo-sol.webp" alt="Sol Design" width="524" height="483" loading="lazy"></div>
+      <h2 class="headline footer__t">¡Escríbenos y la hacemos para ti!</h2>
+      <a class="btn btn--blanco-wa" href="https://wa.me/593000000000" data-wa="general" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp, se abre en una pestaña nueva"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span>Pedir por WhatsApp</span></a>
+      <ul class="footer__datos">
+        <li><a class="enlace-b" href="https://www.instagram.com/solrovi.93/" target="_blank" rel="noopener">Instagram @solrovi.93<span class="solo-lectores"> (se abre en una pestaña nueva)</span></a></li>
+        <li>Hecho a mano en Guayaquil</li>
+        <li><a class="enlace-b" href="#inicio">Volver arriba</a></li>
+      </ul>
+      <p class="footer__pie">Sol Design · <span data-anio>2026</span></p>
+    </div>
+  </div>
+</footer>
+
+<script src="../shared/products.js"></script>
+<script src="js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer onerror="document.documentElement.classList.remove('motion')"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer onerror="document.documentElement.classList.remove('motion')"></script>
+<script src="js/motion.js" defer></script>
+</body>
+</html>

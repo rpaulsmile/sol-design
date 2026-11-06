@@ -1,0 +1,24 @@
+# Material original y referencias (no se publican)
+WhatsApp*
+/logo sol.png
+/codigo de idea.txt
+/florist-website-template/
+/referencias/
+/assets/raw/
+/assets/ai/
+
+# Notas internas del proyecto
+/CLAUDE.md
+/HANDOFF.md
+/.claude/
+
+# Motion graphic: render pesado y artefactos (las secuencias WebP sí se publican)
+propuesta-2/motion/floracion/floracion.mp4
+propuesta-2/motion/floracion/.hyperframes/
+node_modules/
+
+# Varios
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

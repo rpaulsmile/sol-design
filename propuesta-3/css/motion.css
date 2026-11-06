@@ -1,0 +1,22 @@
+/* Sol Design, propuesta 3. Estados ocultos y bucles. Nada de esto existe con reduced-motion o sin GSAP:
+   los ocultos viven bajo .motion y el marquee solo bajo no-preference. */
+.motion [data-pop] { opacity: 0; }
+.motion [data-saltar]:not(.listo) { visibility: hidden; }
+.motion .gar { display: block; }
+.motion .nav { transition: transform .3s ease; }
+.motion .nav--oculto { transform: translateY(-110%); }
+.motion .hero__et, .motion .hero__baj, .motion .hero__cta .btn, .motion .fl img, .motion .conf, .motion .stk img { opacity: 0; }
+.sp { display: inline-block; will-change: transform; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .cinta__pista { justify-content: flex-start; width: max-content; animation: cinta 32s linear infinite; }
+  .cinta__lista { flex-wrap: nowrap; flex: none; white-space: nowrap; gap: 26px; padding-inline: 13px; }
+  .cinta__copia { display: flex; }
+  @media (hover: hover) { .cinta:hover .cinta__pista { animation-play-state: paused; } }
+  @keyframes cinta { to { transform: translateX(-50%); } }
+
+  .menu:not([hidden]) .menu__nav a { animation: rebote .55s cubic-bezier(.34, 1.56, .64, 1) both; }
+  .menu:not([hidden]) .menu__nav a:nth-child(2) { animation-delay: .06s; } .menu:not([hidden]) .menu__nav a:nth-child(3) { animation-delay: .12s; }
+  .menu:not([hidden]) .menu__nav a:nth-child(4) { animation-delay: .18s; } .menu:not([hidden]) .menu__nav a:nth-child(5) { animation-delay: .24s; }
+  @keyframes rebote { from { opacity: 0; transform: translateY(28px) scale(.92); } }
+}

@@ -1,0 +1,55 @@
+/* Sol Design, propuesta 2. Todo lo de este archivo solo existe con <html class="motion">
+   (sin reduced-motion y con GSAP cargado). Sin la clase, la página queda en su estado final. */
+
+/* Evita el destello del hero antes de que GSAP tome el control */
+.motion:not(.motion-listo) .hero__texto,
+.motion:not(.motion-listo) .hero__fin { opacity: 0; }
+
+/* Hero animado: sección de 300svh con escenario fijo (sticky) y secuencia de cuadros en canvas */
+.motion .hero { height: 300svh; min-height: 0; overflow: visible; }
+.motion .hero__escena { position: sticky; top: var(--nav); height: calc(100svh - var(--nav)); min-height: 0; background: var(--papel); }
+.motion .hero__canvas { display: block; }
+.motion .hero__texto { top: clamp(20px, 6svh, 64px); gap: 14px; }
+.motion .hero__desliza { display: grid; position: absolute; left: 50%; bottom: clamp(16px, 4svh, 36px); transform: translateX(-50%); justify-items: center; gap: 10px; color: var(--piedra); white-space: nowrap; background: rgba(247, 244, 238, .9); padding: 8px 14px 6px; }
+@media (min-width: 768px) { .motion .hero__desliza { left: clamp(20px, 3vw, 48px); transform: none; justify-items: start; } }
+.motion .hero__linea { display: block; width: 1px; height: 36px; background: var(--tinta); transform-origin: 50% 0; animation: baja 2.2s var(--ease) infinite; }
+@keyframes baja { 0% { transform: scaleY(0); opacity: 1; } 60% { transform: scaleY(1); opacity: 1; } 100% { transform: scaleY(1); opacity: 0; } }
+.motion .hero__fin .bajada { background: rgba(247, 244, 238, .88); padding: 8px 14px; text-shadow: none; }
+.motion .hero__aro { opacity: 0; }
+.motion .hero__centro { clip-path: circle(0% at 50% 50%); }
+
+/* Transiciones de interacción: lentas y precisas */
+.motion .btn { transition: background-color .35s var(--ease), color .35s var(--ease); }
+.motion .btn__fl { transition: transform .35s var(--ease); }
+.motion .consulta, .motion .nav__enlace, .motion .tab, .motion .enlace-noche { transition: color .3s var(--ease); }
+.motion .vid__play { transition: background-color .3s var(--ease), color .3s var(--ease); }
+.motion .nav__menu-linea { transition: transform .45s var(--ease); }
+.motion .tabs__ind { transition: transform .45s var(--ease); }
+.motion .tabs__ind.sin-anim { transition: none; }
+.motion .vit__fill { will-change: transform; }
+.motion .oc__cuerpo, .motion .oc__n { transition: opacity .4s var(--ease); }
+.motion .menu { animation: menu-entra .5s var(--ease); }
+@keyframes menu-entra { from { opacity: 0; transform: translateY(-8px); } }
+
+/* Foto de tarjeta: fundido a la foto real o zoom (solo puntero fino) */
+@media (hover: hover) and (pointer: fine) {
+  .motion .tj__foto img { transition: transform .9s var(--ease), opacity .5s ease; }
+  .motion .tj:hover .tj__alt { opacity: 1; }
+  .motion .tj:hover .tj__foto--zoom img { transform: scale(1.03); }
+}
+
+/* Acordeón: altura con grid-template-rows */
+.motion .faq__resp { transition: grid-template-rows .6s var(--ease), visibility 0s linear .6s; }
+.motion .faq__item.abierto .faq__resp { transition: grid-template-rows .6s var(--ease), visibility 0s; }
+.motion .faq__mas { transition: transform .5s var(--ease); }
+
+/* Titulares por líneas (el recorte lo pone GSAP; aquí solo la base) */
+.motion .lin { will-change: transform, clip-path; }
+
+/* Vitrina fijada: el riel deja de ser scroll nativo y lo mueve GSAP */
+.motion .vit--fijada { min-height: calc(100svh - var(--nav)); display: flex; flex-direction: column; justify-content: center; padding-block: 28px; }
+.motion .vit--fijada .vit__in { width: 100%; }
+.motion .vit--fijada .vit__riel { overflow: hidden; scroll-snap-type: none; }
+.motion .vit--fijada .vit__fila { will-change: transform; }
+.motion .vit--fijada .vit__cab { margin-bottom: clamp(1.25rem, 3vh, 2.5rem); }
+@media (max-width: 767px) { .motion .vit--fijada .vit__item .tj__foto { height: min(52svh, 62vh); } }

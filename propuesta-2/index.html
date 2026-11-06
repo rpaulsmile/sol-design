@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="es-EC">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sol Design | Flores de chenille hechas a mano en Guayaquil</title>
+<meta name="description" content="Ramos, macetitas y cuadros de chenille hechos a mano en Guayaquil. Mira la vitrina y pide tu pieza por WhatsApp.">
+<meta name="theme-color" content="#F7F4EE">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<script>
+document.documentElement.classList.add('js');
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.documentElement.classList.add('motion');
+  setTimeout(function () { if (!window.gsap) { document.documentElement.classList.remove('motion'); } }, 4500);
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/motion.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-pausa" viewBox="0 0 24 24"><path d="M9 6v12M15 6v12" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8.5 5.5v13l10-6.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<!-- ============ NAV ============ -->
+<header class="nav" data-nav id="inicio">
+  <div class="nav__in contenedor">
+    <a class="nav__logo" href="#inicio" aria-label="Sol Design, inicio"><img src="logo/logo-b.svg" alt="" width="116" height="26"></a>
+    <nav class="nav__links" aria-label="Principal">
+      <a class="nav__enlace" href="#coleccion">Colección</a>
+      <a class="nav__enlace" href="#vitrina">Vitrina</a>
+      <a class="nav__enlace" href="#ocasiones">Ocasiones</a>
+      <a class="nav__enlace" href="#preguntas">Preguntas</a>
+    </nav>
+    <div class="nav__acciones">
+      <a class="btn btn--c" href="https://wa.me/593000000000" data-wa="general" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp, se abre en una pestaña nueva">
+        <span class="btn__t"><span class="solo-movil">Pedir</span><span class="solo-escritorio">Pedir por WhatsApp</span></span><span class="btn__fl" aria-hidden="true">→</span>
+      </a>
+      <button class="nav__menu" type="button" aria-expanded="false" aria-controls="menu-movil" aria-label="Abrir menú" data-menu-btn>
+        <span class="nav__menu-linea"></span><span class="nav__menu-linea"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu-movil" data-menu role="dialog" aria-modal="true" aria-label="Menú" hidden>
+  <nav class="menu__nav" aria-label="Menú móvil">
+    <a class="menu__enlace" href="#coleccion"><span class="menu__n" aria-hidden="true">01</span>Colección</a>
+    <a class="menu__enlace" href="#vitrina"><span class="menu__n" aria-hidden="true">02</span>Vitrina</a>
+    <a class="menu__enlace" href="#ocasiones"><span class="menu__n" aria-hidden="true">03</span>Ocasiones</a>
+    <a class="menu__enlace" href="#preguntas"><span class="menu__n" aria-hidden="true">04</span>Preguntas</a>
+  </nav>
+  <a class="btn" href="https://wa.me/593000000000" data-wa="general" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp, se abre en una pestaña nueva">
+    <span class="btn__t">Pedir por WhatsApp</span><span class="btn__fl" aria-hidden="true">→</span>
+  </a>
+</div>
+
+<main id="contenido">
+
+<!-- ============ HERO "FLORACIÓN" ============ -->
+<section class="hero" data-hero aria-labelledby="hero-titulo">
+  <div class="hero__escena" data-hero-escena>
+    <canvas class="hero__canvas" data-hero-canvas aria-hidden="true"></canvas>
+    <span class="hero__aro" data-hero-aro aria-hidden="true"></span>
+    <div class="hero__centro" data-hero-centro>
+      <img src="../assets/img/maceta-rosa-roja-fondo-800.webp" width="800" height="800" decoding="async" alt="Macetita con una rosa roja de chenille en maceta azul con musgo">
+      <img src="../assets/img/maceta-margarita-lila-fondo-800.webp" width="800" height="800" decoding="async" alt="Macetita con una margarita lila de chenille">
+      <img src="../assets/img/gerbera-rosada-tarjeta-fondo-800.webp" width="800" height="800" decoding="async" alt="Gerbera rosada de chenille sobre una tarjeta amarilla">
+    </div>
+    <div class="hero__texto contenedor" data-hero-texto>
+      <p class="label">Hecho a mano en Guayaquil</p>
+      <h1 class="display" id="hero-titulo">Flores que <em>no se marchitan</em></h1>
+    </div>
+    <div class="hero__fin contenedor" data-hero-fin>
+      <p class="bajada">Ramos, macetitas y cuadros de chenille, hechos a mano y por encargo.</p>
+      <a class="btn" href="https://wa.me/593000000000" data-wa="general" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp, se abre en una pestaña nueva">
+        <span class="btn__t">Pedir por WhatsApp</span><span class="btn__fl" aria-hidden="true">→</span>
+      </a>
+    </div>
+    <p class="hero__desliza label" data-hero-desliza aria-hidden="true">Desliza para que florezca<span class="hero__linea"></span></p>
+  </div>
+</section>
+
+<!-- ============ STATEMENT ============ -->
+<section class="sec statement" aria-labelledby="statement-t">
+  <div class="contenedor">
+    <h2 class="headline statement__t" id="statement-t" data-anim="lines">Piezas pequeñas, hechas una por una, para regalar algo que <em>dura.</em></h2>
+    <ul class="datos">
+      <li class="dato" data-anim="block"><span class="dato__t">100 % a mano</span></li>
+      <li class="dato" data-anim="block"><span class="dato__t">Colores a pedido</span></li>
+      <li class="dato" data-anim="block"><span class="dato__t">Entregas en Guayaquil</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ VITRINA ============ -->
+<section class="sec sec--hueso vit" id="vitrina" data-vit aria-labelledby="vit-t">
+  <div class="vit__in">
+    <div class="contenedor vit__cab">
+      <div>
+        <p class="label" data-anim="block">La vitrina</p>
+        <h2 class="headline" id="vit-t" data-anim="lines">Piezas <em>destacadas</em></h2>
+      </div>
+      <div class="vit__medidor" aria-hidden="true">
+        <span class="vit__cont numero" data-vit-cont>01 / 07</span>
+        <span class="vit__barra"><span class="vit__fill" data-vit-fill></span></span>
+      </div>
+    </div>
+    <div class="vit__riel" data-vit-riel tabindex="0" role="region" aria-label="Piezas destacadas, desliza para ver más">
+      <ul class="vit__fila" data-vit-fila></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COLECCIÓN ============ -->
+<section class="sec coleccion" id="coleccion" aria-labelledby="col-t">
+  <div class="contenedor">
+    <div class="col__cab">
+      <h2 class="headline" id="col-t" data-anim="lines">La <em>colección</em></h2>
+      <p class="label label--piedra numero" data-col-conteo aria-live="polite">6 piezas</p>
+    </div>
+    <div class="tabs" data-tabs>
+      <div class="tabs__in" data-tabs-in role="group" aria-label="Filtrar por categoría"></div>
+    </div>
+    <ul class="grid" data-col-grid></ul>
+    <div class="col__vacio" data-col-vacio hidden>
+      <p class="bajada">Aún no hay piezas en esta categoría. Pídela a medida.</p>
+      <a class="btn" href="https://wa.me/593000000000" data-wa="general" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp, se abre en una pestaña nueva">
+        <span class="btn__t">Pedir por WhatsApp</span><span class="btn__fl" aria-hidden="true">→</span>
+      </a>
+    </div>
+    <noscript><p class="bajada">Para ver la colección activa JavaScript, o escríbenos directo por <a class="enlace" href="https://wa.me/593000000000">WhatsApp</a>.</p></noscript>
+  </div>
+</section>
+
+<!-- ============ EL OFICIO ============ -->
+<section class="sec oficio" id="oficio" aria-labelledby="oficio-t">
+  <div class="contenedor">
+    <div class="oficio__cab">
+      <p class="label" data-anim="block">El proceso</p>
+      <h2 class="headline" id="oficio-t" data-anim="lines">El <em>oficio</em></h2>
+    </div>
+    <div class="oficio__video">
+      <div class="vid" data-arco-video>
+        <video class="vid__v" data-video muted playsinline loop preload="none" poster="../assets/video/hero-poster.webp" width="576" height="1024" aria-hidden="true" tabindex="-1"></video>
+        <button class="vid__play" type="button" data-video-play aria-label="Pausar video">
+          <svg class="icono icono--pausa" aria-hidden="true"><use href="#i-pausa"/></svg>
+          <svg class="icono icono--play" aria-hidden="true"><use href="#i-play"/></svg>
+        </button>
+      </div>
+      <div class="oficio__vtxt" data-anim="block">
+        <p class="label label--piedra">En movimiento</p>
+        <p class="headline">Así se ve en sus <em>manos</em></p>
+        <p>Una flor de chenille toma forma en pocos minutos: se tuerce, se dobla y se acomoda pétalo por pétalo.</p>
+      </div>
+    </div>
+    <ol class="pasos">
+      <li class="paso" data-anim="block">
+        <img class="paso__img" src="../assets/img/lapiceros-flor-perlas-fondo-800.webp" width="800" height="800" loading="lazy" decoding="async" alt="Lapiceros forrados en chenille con flores y perlitas, listos para armar">
+        <span class="paso__n numero" aria-hidden="true">01</span>
+        <h3 class="card-title">Elegimos el chenille</h3>
+        <p>Escogemos los colores y las texturas más felpudas, tal como los pediste.</p>
+      </li>
+      <li class="paso" data-anim="block">
+        <img class="paso__img" src="../assets/img/gerbera-rosada-tarjeta-fondo-800.webp" width="800" height="800" loading="lazy" decoding="async" alt="Gerbera rosada de chenille con pétalos doblados a mano">
+        <span class="paso__n numero" aria-hidden="true">02</span>
+        <h3 class="card-title">Le damos forma</h3>
+        <p>Pétalo por pétalo, doblado a mano alrededor del alambre hasta que la flor queda redonda.</p>
+      </li>
+      <li class="paso" data-anim="block">
+        <img class="paso__img" src="../assets/img/maceta-rosa-roja-fondo-800.webp" width="800" height="800" loading="lazy" decoding="async" alt="Macetita con una rosa roja de chenille en maceta azul con musgo">
+        <span class="paso__n numero" aria-hidden="true">03</span>
+        <h3 class="card-title">La presentamos</h3>
+        <p>La acomodamos entre musgo, con su cinta y el sello de Sol Design, lista para regalar.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ STATEMENT OSCURO ============ -->
+<section class="noche cita" aria-label="Cita">
+  <div class="contenedor">
+    <blockquote class="cita__t" data-anim="lines">Cada pétalo, doblado a mano.</blockquote>
+    <p class="label label--vc cita__firma" data-anim="block">— Sol, Sol Design</p>
+  </div>
+</section>
+
+<!-- ============ OCASIONES ============ -->
+<section class="sec ocasiones" id="ocasiones" data-ocasiones aria-labelledby="oc-t">
+  <div class="contenedor">
+    <div class="oc__cab">
+      <h2 class="headline" id="oc-t" data-anim="lines">Para cada <em>ocasión</em></h2>
+      <p class="bajada" data-anim="block">Dinos la fecha y te ayudamos a elegir.</p>
+    </div>
+    <ol class="oc__lista" data-oc-lista>
+      <li class="oc__fila" data-oc data-img="../assets/img/gerbera-rosada-tarjeta-fondo-800.webp">
+        <span class="oc__n numero" aria-hidden="true">01</span>
+        <div class="oc__cuerpo"><h3 class="headline oc__nombre">Cumpleaños</h3><p class="oc__frase">Un detalle que se queda en su escritorio para siempre.</p></div>
+        <a class="consulta oc__cta" href="https://wa.me/593000000000" data-wa="ocasion" data-mensaje="¡Hola Sol Design! 🌸 Quiero algo para un cumpleaños. ¿Qué me recomiendas?" data-nombre="algo para un cumpleaños" target="_blank" rel="noopener">Pedir para esta ocasión <span aria-hidden="true">→</span></a>
+      </li>
+      <li class="oc__fila" data-oc data-img="../assets/img/lapiceros-flor-perlas-fondo-800.webp">
+        <span class="oc__n numero" aria-hidden="true">02</span>
+        <div class="oc__cuerpo"><h3 class="headline oc__nombre">Graduación</h3><p class="oc__frase">Para celebrar el esfuerzo con algo que no se marchita.</p></div>
+        <a class="consulta oc__cta" href="https://wa.me/593000000000" data-wa="ocasion" data-mensaje="¡Hola Sol Design! 🌸 Quiero algo para una graduación. ¿Qué me recomiendas?" data-nombre="algo para una graduación" target="_blank" rel="noopener">Pedir para esta ocasión <span aria-hidden="true">→</span></a>
+      </li>
+      <li class="oc__fila" data-oc data-img="../assets/img/maceta-rosa-roja-fondo-800.webp">
+        <span class="oc__n numero" aria-hidden="true">03</span>
+        <div class="oc__cuerpo"><h3 class="headline oc__nombre">San Valentín</h3><p class="oc__frase">Rosas rojas que no se secan.</p></div>
+        <a class="consulta oc__cta" href="https://wa.me/593000000000" data-wa="ocasion" data-mensaje="¡Hola Sol Design! 🌸 Quiero algo para San Valentín. ¿Qué me recomiendas?" data-nombre="algo para San Valentín" target="_blank" rel="noopener">Pedir para esta ocasión <span aria-hidden="true">→</span></a>
+      </li>
+      <li class="oc__fila" data-oc data-img="../assets/img/maceta-margarita-lila-fondo-800.webp">
+        <span class="oc__n numero" aria-hidden="true">04</span>
+        <div class="oc__cuerpo"><h3 class="headline oc__nombre">Día de la Madre</h3><p class="oc__frase">Para la mamá que todo lo da, un ramo que dura.</p></div>
+        <a class="consulta oc__cta" href="https://wa.me/593000000000" data-wa="ocasion" data-mensaje="¡Hola Sol Design! 🌸 Quiero algo para el Día de la Madre. ¿Qué me recomiendas?" data-nombre="algo para el Día de la Madre" target="_blank" rel="noopener">Pedir para esta ocasión <span aria-hidden="true">→</span></a>
+      </li>
+      <li class="oc__fila" data-oc data-img="../assets/img/mini-macetero-rosa-roja-fondo-800.webp">
+        <span class="oc__n numero" aria-hidden="true">05</span>
+        <div class="oc__cuerpo"><h3 class="headline oc__nombre">Maternidad y baby shower</h3><p class="oc__frase">Coronas con su nombre y mucha ternura.</p></div>
+        <a class="consulta oc__cta" href="https://wa.me/593000000000" data-wa="ocasion" data-mensaje="¡Hola Sol Design! 🌸 Quiero algo para un baby shower o para celebrar la maternidad. ¿Qué me recomiendas?" data-nombre="algo para un baby shower" target="_blank" rel="noopener">Pedir para esta ocasión <span aria-hidden="true">→</span></a>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ PERSONALIZA ============ -->
+<section class="sec sec--hueso personaliza" id="personaliza" aria-labelledby="pers-t">
+  <div class="contenedor pers__in">
+    <div class="pers__txt">
+      <p class="label" data-anim="block">A tu gusto</p>
+      <h2 class="headline" id="pers-t" data-anim="lines">Hecha a tu <em>medida</em></h2>
+      <p class="pers__p" data-anim="block">Elige la pieza, escribe el nombre y escoge el color que más te guste. Sol arma tu mensaje y lo recibe por WhatsApp.</p>
+    </div>
+    <form class="ficha" data-pers novalidate data-anim="block">
+      <div class="ficha__cab"><span class="label">Ficha de pedido</span><span class="label label--piedra">Sol Design</span></div>
+      <div class="ficha__fila">
+        <label class="label" for="pers-pieza">Pieza</label>
+        <select class="campo" id="pers-pieza" name="pieza" data-pers-pieza></select>
+      </div>
+      <div class="ficha__fila">
+        <label class="label" for="pers-nombre">Nombre</label>
+        <input class="campo" id="pers-nombre" name="nombre" type="text" maxlength="30" autocomplete="off" placeholder="Por ejemplo: Isabella">
+      </div>
+      <fieldset class="ficha__fila ficha__colores">
+        <legend class="label">Color</legend>
+        <div class="muestras" data-muestras>
+          <label class="mu"><input type="radio" name="color" value="rojo"><span class="mu__c" style="background:#E8261C"></span><span class="solo-lectores">Rojo</span></label>
+          <label class="mu"><input type="radio" name="color" value="rosado"><span class="mu__c" style="background:#F4A3C0"></span><span class="solo-lectores">Rosado</span></label>
+          <label class="mu"><input type="radio" name="color" value="lila"><span class="mu__c" style="background:#9B6FD6"></span><span class="solo-lectores">Lila</span></label>
+          <label class="mu"><input type="radio" name="color" value="turquesa"><span class="mu__c" style="background:#7FD1D9"></span><span class="solo-lectores">Turquesa</span></label>
+          <label class="mu"><input type="radio" name="color" value="amarillo"><span class="mu__c" style="background:#F5D547"></span><span class="solo-lectores">Amarillo</span></label>
+          <label class="mu"><input type="radio" name="color" value="azul"><span class="mu__c" style="background:#1F6FD1"></span><span class="solo-lectores">Azul</span></label>
+        </div>
+      </fieldset>
+      <div class="ficha__fila">
+        <p class="label label--piedra">Tu mensaje</p>
+        <p class="ficha__msg" data-pers-vista aria-live="polite"></p>
+      </div>
+      <div class="ficha__pie">
+        <a class="btn btn--bloque" href="https://wa.me/593000000000" data-pers-btn target="_blank" rel="noopener" aria-label="Pedir por WhatsApp, se abre en una pestaña nueva">
+          <span class="btn__t">Pedir por WhatsApp</span><span class="btn__fl" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ PREGUNTAS ============ -->
+<section class="sec faq" id="preguntas" aria-labelledby="faq-t">
+  <div class="contenedor faq__in">
+    <div class="faq__cab">
+      <p class="label" data-anim="block">Antes de pedir</p>
+      <h2 class="headline" id="faq-t" data-anim="lines">Preguntas <em>frecuentes</em></h2>
+    </div>
+    <div class="faq__lista" data-faq>
+      <div class="faq__item">
+        <h3 class="faq__h"><button type="button" class="faq__btn" aria-expanded="false" aria-controls="faq-r1" id="faq-b1"><span class="faq__n numero" aria-hidden="true">01</span><span class="faq__q card-title">¿Hacen envíos en Guayaquil?</span><span class="faq__mas" aria-hidden="true"></span></button></h3>
+        <div class="faq__resp" id="faq-r1" role="region" aria-labelledby="faq-b1"><div class="faq__resp-in"><p>Sí. Enviamos a toda la ciudad por moto o encomienda y coordinamos la entrega por WhatsApp. También puedes retirar tu pedido en el norte de Guayaquil, sin costo.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <h3 class="faq__h"><button type="button" class="faq__btn" aria-expanded="false" aria-controls="faq-r2" id="faq-b2"><span class="faq__n numero" aria-hidden="true">02</span><span class="faq__q card-title">¿Cuánto demora un pedido?</span><span class="faq__mas" aria-hidden="true"></span></button></h3>
+        <div class="faq__resp" id="faq-r2" role="region" aria-labelledby="faq-b2"><div class="faq__resp-in"><p>Las piezas que ya tenemos listas salen en 1 o 2 días. Si la hacemos a tu gusto, toma de 3 a 5 días, según el tamaño. Si tu fecha es especial, avísanos con tiempo.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <h3 class="faq__h"><button type="button" class="faq__btn" aria-expanded="false" aria-controls="faq-r3" id="faq-b3"><span class="faq__n numero" aria-hidden="true">03</span><span class="faq__q card-title">¿Puedo personalizar el color y el nombre?</span><span class="faq__mas" aria-hidden="true"></span></button></h3>
+        <div class="faq__resp" id="faq-r3" role="region" aria-labelledby="faq-b3"><div class="faq__resp-in"><p>Sí. Cuéntanos el color y el nombre y la hacemos para ti. Las coronas, los maceteros y los ramos se pueden personalizar sin costo extra en la mayoría de los casos.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <h3 class="faq__h"><button type="button" class="faq__btn" aria-expanded="false" aria-controls="faq-r4" id="faq-b4"><span class="faq__n numero" aria-hidden="true">04</span><span class="faq__q card-title">¿Cómo cuido mi flor de chenille?</span><span class="faq__mas" aria-hidden="true"></span></button></h3>
+        <div class="faq__resp" id="faq-r4" role="region" aria-labelledby="faq-b4"><div class="faq__resp-in"><p>Evita el agua y el sol directo. Para quitar el polvo, pásale un cepillo suave o un secador en aire frío. Con ese cuidado dura años.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="noche footer" data-footer>
+  <div class="contenedor">
+    <h2 class="headline footer__t">Escríbenos y la hacemos para <em>ti</em></h2>
+    <a class="btn btn--noche" href="https://wa.me/593000000000" data-wa="general" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp, se abre en una pestaña nueva">
+      <span class="btn__t">Pedir por WhatsApp</span><span class="btn__fl" aria-hidden="true">→</span>
+    </a>
+    <div class="footer__fila">
+      <img class="footer__logo" src="logo/logo-b-stacked-invert.svg" alt="Sol Design" width="220" height="142" loading="lazy">
+      <ul class="footer__datos">
+        <li><a class="enlace-noche" href="https://www.instagram.com/solrovi.93/" target="_blank" rel="noopener">Instagram @solrovi.93<span class="solo-lectores"> (se abre en una pestaña nueva)</span></a></li>
+        <li><span>Guayaquil, Ecuador</span></li>
+        <li><a class="enlace-noche" href="#inicio">Volver arriba</a></li>
+      </ul>
+    </div>
+    <p class="footer__pie label label--vc">Sol Design · <span data-anio>2026</span></p>
+  </div>
+</footer>
+
+<script src="../shared/products.js"></script>
+<script src="js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer onerror="document.documentElement.classList.remove('motion')"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer onerror="document.documentElement.classList.remove('motion')"></script>
+<script src="js/motion.js" defer></script>
+</body>
+</html>

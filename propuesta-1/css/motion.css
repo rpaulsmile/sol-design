@@ -1,0 +1,106 @@
+/* Sol Design, propuesta 1. Capa de movimiento (tanda 2).
+   Todo lo que cambia el diseño cuelga de la clase .motion en <html>: la pone un script del <head> solo si NO hay
+   prefers-reduced-motion, y motion.js la quita si GSAP no carga o si el visitante pasa a reduced-motion.
+   Sin .motion la página queda en su estado final (tanda 1). */
+
+/* ---------- Piezas de titulares divididos por líneas ---------- */
+.l-clip { display: block; overflow: hidden; padding: .1em .08em; margin: -.1em -.08em; }
+.l-in { display: block; white-space: nowrap; }
+.l-in--libre { white-space: normal; }
+.contador__clip { display: inline-block; overflow: hidden; vertical-align: bottom; }
+
+/* ---------- Base de movimiento ---------- */
+.motion { scroll-behavior: auto; }
+
+/* ---------- Nav: fijo, transparente sobre el hero, crema tras 80px ---------- */
+.motion .nav {
+  position: fixed; left: 0; right: 0; top: 0; background: transparent; border-bottom: 0; color: var(--crema);
+  transition: color .4s var(--ease-out); will-change: transform;
+}
+.motion .nav::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: var(--crema); border-bottom: 1px solid var(--linea); opacity: 0; transition: opacity .4s var(--ease-out);
+}
+.motion .nav.nav--solido { color: var(--cacao); }
+.motion .nav.nav--solido::before { opacity: 1; }
+.motion .nav .logo { color: inherit; --logo-sol: var(--sol); }
+.motion .nav.nav--solido .logo { --logo-sol: var(--terracota); }
+.motion .nav__menu-linea { background: currentColor; }
+.motion .nav:not(.nav--solido) .btn { background: var(--crema); color: var(--cacao); }
+.motion .nav:not(.nav--solido) .btn::before { background: var(--sol); }
+
+/* ---------- Hero ---------- */
+.motion .hero { min-height: max(560px, 100svh); }
+.motion .hero__scroll { display: block; }
+.motion .hero__video { position: relative; }
+.hero__poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero__velo { position: absolute; inset: 0; z-index: 1; background: var(--cacao); opacity: 0; pointer-events: none; }
+html.motion:not(.motion-listo) .hero__texto > * { opacity: 0; }
+@media (max-width: 1023px) {
+  /* El medio es más alto que el hero para poder moverlo en parallax sin dejar huecos */
+  .motion .hero__media { inset: -25% 0 0 0; }
+  .motion .hero__play { top: calc(20% + var(--nav-h) + 12px); }
+}
+@media (min-width: 1024px) {
+  .motion .hero__in { padding-block: calc(var(--nav-h) + 24px) 48px; }
+}
+
+/* ---------- Orbit: anillo pinned de 100svh ---------- */
+.motion .orbit-seccion { padding: 0; height: 100svh; overflow: hidden; }
+.motion .orbit {
+  --disco: min(72vw, 420px, max(150px, calc(100svh - 440px)));
+  height: 100%; display: flex; flex-direction: column;
+}
+.motion .orbit__cabeza { flex: none; margin-bottom: 0; padding-top: calc(var(--nav-h) + 12px); gap: 8px; }
+.motion .orbit__escena { flex: 1; min-height: 0; position: relative; overflow: visible; }
+.motion .orbit__cabeza { position: relative; z-index: 2; }
+.motion .orbit__pista {
+  position: absolute; inset: 0; display: block; overflow: visible; padding: 0; scroll-snap-type: none;
+  touch-action: pan-y; user-select: none; -webkit-user-select: none; cursor: grab;
+}
+.motion .orbit__pista:active { cursor: grabbing; }
+.motion .orbit__pista img { -webkit-user-drag: none; }
+.motion .orbit__item {
+  position: absolute; left: 50%; top: 50%; flex: none; display: block; cursor: pointer;
+  width: var(--disco); height: var(--disco); margin: calc(var(--disco) / -2) 0 0 calc(var(--disco) / -2);
+  will-change: transform, opacity;
+}
+.motion .orbit__disco { width: 100%; height: 100%; }
+.orbit__fichas { flex: none; display: grid; justify-items: center; padding-inline: var(--gutter); min-height: 11.5rem; }
+.orbit__fichas .orbit__ficha { grid-area: 1 / 1; visibility: hidden; opacity: 0; }
+.motion .orbit__controles { flex: none; margin-top: 4px; padding-bottom: 16px; }
+
+/* ---------- Cómo se hace: sticky de 100svh dentro de 200svh (240 en móvil) ---------- */
+.motion .pasos { padding: 0; height: 240svh; overflow: clip; }
+@media (min-width: 768px) { .motion .pasos { height: 200svh; } }
+.motion .pasos .contenedor {
+  position: sticky; top: 0; height: 100svh; display: flex; flex-direction: column;
+  padding-top: calc(var(--nav-h) + 16px); padding-bottom: 24px;
+}
+.motion .pasos .contenedor > * { position: relative; }
+.motion .pasos .contenedor > .pasos__fondo { position: absolute; z-index: 0; transform: none; }
+.motion .pasos__cabeza { flex: none; margin-bottom: 12px; z-index: 1; }
+.motion .pasos__hud { flex: none; margin-bottom: 16px; z-index: 1; }
+.motion .pasos__lista { flex: 1; min-height: 0; display: block; z-index: 1; }
+.motion .paso { position: absolute; inset: 0; grid-template-rows: minmax(0, 1fr) auto; will-change: transform, opacity; }
+.motion .paso__foto { aspect-ratio: auto; height: 100%; min-height: 0; }
+.motion .paso__texto { padding-bottom: 12px; }
+.motion [data-pasos-num] { display: inline-block; }
+@media (min-width: 768px) {
+  .motion .paso { grid-template-columns: 1fr 1fr; grid-template-rows: minmax(0, 1fr); }
+  .motion .paso__foto { aspect-ratio: auto; }
+}
+
+/* ---------- Ocasiones: tarjetas apiladas con sticky ---------- */
+.motion .ocasion {
+  position: sticky; top: calc(var(--stack-top) + var(--stack-step) * var(--i)); transform-origin: 50% 0;
+}
+
+/* ---------- Footer revelado ---------- */
+.motion .footer.footer--revelado { position: sticky; bottom: 0; z-index: 0; }
+
+/* ---------- Flores del cursor ---------- */
+.flor-cursor {
+  position: fixed; left: 0; top: 0; z-index: 50; pointer-events: none; user-select: none; opacity: 0;
+  height: auto; max-width: none; will-change: transform, opacity;
+}
